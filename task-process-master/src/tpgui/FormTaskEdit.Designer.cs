@@ -67,6 +67,7 @@
             this.radioButton1.Text = "高";
             this.radioButton1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.radioButton1.UseVisualStyleBackColor = true;
+            this.radioButton1.CheckedChanged += new System.EventHandler(this.radioButton1_CheckedChanged);
             // 
             // radioButton2
             // 
@@ -80,6 +81,7 @@
             this.radioButton2.Text = "中";
             this.radioButton2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.radioButton2.UseVisualStyleBackColor = true;
+            this.radioButton2.CheckedChanged += new System.EventHandler(this.radioButton2_CheckedChanged);
             // 
             // radioButton3
             // 
@@ -159,6 +161,7 @@
             this.groupBox1.Size = new System.Drawing.Size(267, 56);
             this.groupBox1.TabIndex = 22;
             this.groupBox1.TabStop = false;
+            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
             // label1
             // 
@@ -196,6 +199,7 @@
             this.button3.TabIndex = 24;
             this.button3.Text = "取消";
             this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // button1
             // 
@@ -236,6 +240,7 @@
             this.Name = "FormTaskEdit";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "作业编辑";
+            this.Load += new System.EventHandler(this.FormTaskEdit_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
@@ -260,4 +265,6 @@
 		private System.Windows.Forms.Button button1;
 		private System.Windows.Forms.TextBox textBox2;
     }
+
+ 
 }

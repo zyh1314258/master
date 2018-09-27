@@ -17,13 +17,13 @@ namespace xworks.taskprocess
         {
             InitializeComponent();
         }
-        private List<Task> tasks = new List<Task>();
+     
 		private void _toolStripButtonOpen_Click(object sender, EventArgs e)
 		{
 			TaskFile tf = new TaskFile();
             string path = "";
            
-         OpenFileDialog ofd = new OpenFileDialog();
+            OpenFileDialog ofd = new OpenFileDialog();
             ofd.Filter = "XML|*.xml";
             if (ofd.ShowDialog() == DialogResult.OK)
             {
@@ -31,7 +31,8 @@ namespace xworks.taskprocess
             }
              List<Task> tasks = tf.LoadTasks(path);
               listView1.Items.Clear();
-             int i = 0;
+          
+            int i = 0;
          
              foreach (Task t in tasks)
              {
@@ -54,7 +55,7 @@ namespace xworks.taskprocess
              }
 
 		}
-
+        private List<Task> tasks = new List<Task>();
         private void FillTaskListView()
         {
          listView1.Items.Clear();

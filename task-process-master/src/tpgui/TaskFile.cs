@@ -13,9 +13,10 @@ namespace xworks.taskprocess
 	{
 		public List<Task> LoadTasks(string filePath)
 		{
-			List<Task> Tasks = new List<Task>();
+			List<Task> tasks = new List<Task>();
             XmlDocument xmldoc = new XmlDocument();
             xmldoc.Load(filePath);
+
             XmlNodeList tasknodes = xmldoc.DocumentElement.ChildNodes;
             foreach (XmlNode tasknode in tasknodes)
             {
@@ -74,12 +75,12 @@ namespace xworks.taskprocess
                         
               
                 }
-                Tasks.Add(ts);
+                tasks.Add(ts);
             }
 
 
-			//TODO
-			return Tasks;
+			
+            return tasks;
 		}
 
 
